@@ -15,13 +15,13 @@ const Banner = () => {
         showThumbs={false}
       >
         <div>
-          <img src="/amazonBanner1.jpg" />
+          <img src="/africaBanner.jpg" />
         </div>
         <div>
-          <img src="/amazonBanner2.jpg" />
+          <img src="/basketBanner.jpg" />
         </div>
         <div>
-          <img src="/amazonBanner3.jpg" />
+          <img src="/questionBanner.jpg" />
         </div>
       </Carousel>
     </div>

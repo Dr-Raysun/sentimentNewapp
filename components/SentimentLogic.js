@@ -29,6 +29,8 @@ const SentimentLogic = ({ productTitle }) => {
 
     // Analyze the sentiment of the text
     var result = sentiment.analyze(text);
+    //showing result on console
+    console.log("result of the input");
     console.log(result);
 
     // sending the data to firestore database
