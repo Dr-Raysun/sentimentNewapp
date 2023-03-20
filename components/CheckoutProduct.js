@@ -33,7 +33,7 @@ const CheckoutProduct = ({
   };
   //removing from basket
   const removeItemFromBasket = () => {
-    prompt(`removing item with id ${id}`);
+    // prompt(`removing item with id ${id}`);
     dispatch(removeFromBasket({ id }));
   };
   return (
