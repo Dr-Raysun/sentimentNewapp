@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { StarIcon } from "@heroicons/react/24/solid";
+import { BackwardIcon, StarIcon } from "@heroicons/react/24/solid";
+
+import { backwardIcon } from "@heroicons/react/24/solid";
 
 import Currency from "react-currency-formatter";
 import { useState } from "react";
@@ -24,6 +26,8 @@ const sentimentPage = () => {
         <>
           <div className="border-2 border-red-700 mx-2 relative flex flex-col bg-white z-30 p-10 rounded-lg  mt-5">
             <p className="absolute border-2 border-green-700 top-2 right-2 text-xs italic text-gray-400">
+              <BackwardIcon className="h-8 " onClick={() => router.push("/")} />
+
               {dataParse?.category}
             </p>
             <Image

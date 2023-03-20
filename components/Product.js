@@ -62,24 +62,27 @@ const Product = ({ title, id, price, description, category, image }) => {
   };
 
   return (
-    <div
-      onClick={() =>
-        sendToSentimetPage({
-          title,
-          id,
-          price,
-          description,
-          category,
-          image,
-          hasPrime,
-        })
-      }
-      className="border-2 border-red-700 mx-2 relative flex flex-col bg-white z-30 p-10 rounded-lg  mt-5"
-    >
+    <div className="border-2 border-red-700 mx-2 relative flex flex-col bg-white z-30 p-10 rounded-lg  mt-5">
       <p className="absolute border-2 border-green-700 top-2 right-2 text-xs italic text-gray-400">
         {category}
       </p>
-      <Image src={image} height={200} width={200} objectFit="contain" />
+      <Image
+        src={image}
+        height={200}
+        width={200}
+        objectFit="contain"
+        onClick={() =>
+          sendToSentimetPage({
+            title,
+            id,
+            price,
+            description,
+            category,
+            image,
+            hasPrime,
+          })
+        }
+      />
       <h4 className="border-4 border-blue-600 my-3">{title}</h4>
 
       <div className="flex ">

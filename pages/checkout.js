@@ -5,21 +5,21 @@ import { useSelector } from "react-redux";
 import CheckoutProduct from "../components/CheckoutProduct";
 import { useSession } from "next-auth/react";
 import Currency from "react-currency-formatter";
-import Recommend from "../components/Recommend";
+//import Recommend from "../components/Recommend";
 
 const Checkout = () => {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
   const { data: session } = useSession();
 
-  //getting all the items in the user basket
+  /*  //getting all the items in the user basket
   const productPick = [...items];
   console.log("showing product");
   console.log(productPick);
   // picking only the name of the product and putting it in a new array
   const pick = productPick.map((element, index) => element?.title);
   console.log("showing pick");
-  console.log(pick);
+  console.log(pick); */
 
   return (
     <div className="border-4 border-green-900 bg-gray-100">
@@ -55,7 +55,7 @@ const Checkout = () => {
             ))}
           </div>
           {/** recommendation  */}
-          <div className="">
+          {/* <div className="">
             <h3>building for recommendation </h3>
             <div className="">
               <h1 className="text-3xl font-semibold border-b-2 pb-4 mb-8 ">
@@ -63,7 +63,7 @@ const Checkout = () => {
               </h1>
             </div>
             <Recommend pick={pick} />
-          </div>
+          </div> */}
         </div>
 
         {/** righ hand section  */}
